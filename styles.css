@@ -34,10 +34,12 @@ select { min-height:42px; border:1px solid var(--line); border-radius:11px; back
 .card-meta i { padding:0 5px; font-style:normal; }
 .view-link { display:flex; justify-content:space-between; margin-top:auto; padding-top:12px; border-top:1px solid var(--line); font-size:12px; font-weight:700; }
 .pagination { display:flex; align-items:center; justify-content:center; gap:18px; margin-top:34px; }
-.pagination button { border:0; background:transparent; color:var(--ink); font-size:13px; }
+.pagination button { min-height:34px; padding:0 8px; border:0; border-radius:9px; background:transparent; color:var(--ink); font-size:13px; cursor:pointer; }
 .pagination button:disabled { color:#aab2ac; }
+.pagination button:focus-visible,.card-button:focus-visible,.dialog-close:focus-visible { outline:3px solid #617000; outline-offset:3px; }
 .pages { display:flex; align-items:center; gap:5px; }
-.pages span { display:grid; place-items:center; min-width:34px; height:34px; border-radius:9px; font-size:12px; }
+.pages button { display:grid; place-items:center; min-width:34px; height:34px; padding:0; font-size:12px; }
+.product-commerce[hidden] { display:none; }
 .pages .active { background:var(--ink); color:var(--accent); }
 .mockup-link { margin:34px 0 0; text-align:center; font-size:13px; font-weight:700; }
 .product-dialog { width:min(1120px,92vw); max-height:90vh; padding:0; overflow:hidden; border:0; border-radius:24px; background:var(--paper); color:var(--ink); box-shadow:0 30px 90px rgba(17,27,21,.25); }
@@ -75,7 +77,7 @@ select { min-height:42px; border:1px solid var(--line); border-radius:11px; back
 .inline-state.empty { border-color:#d9e19d; }
 @keyframes spin { to { transform:rotate(360deg); } }
 @media (max-width:900px) { .product-grid{grid-template-columns:repeat(2,1fr)} .toolbar{align-items:stretch;flex-direction:column} .search-field{min-height:42px} .filters{display:grid;grid-template-columns:1fr 1fr} .filters select{width:100%} .detail-grid{grid-template-columns:1fr;overflow:auto;max-height:90vh} .states-grid{grid-template-columns:1fr} }
-@media (max-width:560px) { .site-header{height:62px;padding:0 18px} .header-note{display:none} .catalog-shell,.states-shell{width:auto;padding:30px 16px 42px} .intro-row{display:block;margin-bottom:20px} h1{font-size:38px} .lead{font-size:14px} .result-count{display:block;margin-top:14px} .toolbar{padding:10px;border-radius:14px} select{padding-right:18px;font-size:12px} .product-grid{gap:10px} .image-wrap{aspect-ratio:1} .card-copy{padding:12px} .card-copy strong{min-height:52px;font-size:13px} .card-meta{margin-bottom:10px;font-size:11px} .view-link{font-size:11px} .pagination{gap:8px} .pagination button{font-size:0} .pagination button::first-letter{font-size:16px} .pages span:nth-child(3),.pages span:nth-child(4){display:none} .product-dialog{width:calc(100vw - 24px)} .detail-grid{padding:14px;gap:20px} .detail-image{aspect-ratio:1.3} .detail-copy h2{font-size:34px} .detail-list{grid-template-columns:1fr 1fr} .product-commerce{grid-template-columns:1fr} .source-summary{border-top:1px solid rgba(35,46,38,.16);border-left:0} }
+@media (max-width:560px) { .site-header{height:62px;padding:0 18px} .header-note{display:none} .catalog-shell,.states-shell{width:auto;padding:30px 16px 42px} .intro-row{display:block;margin-bottom:20px} h1{font-size:38px} .lead{font-size:14px} .result-count{display:block;margin-top:14px} .toolbar{padding:10px;border-radius:14px} select{padding-right:18px;font-size:12px} .product-grid{gap:10px} .image-wrap{aspect-ratio:1} .card-copy{padding:12px} .card-copy strong{min-height:52px;font-size:13px} .card-meta{margin-bottom:10px;font-size:11px} .view-link{font-size:11px} .pagination{gap:8px} .pagination > button{font-size:0} .pagination > button::first-letter{font-size:16px} .pages button:nth-child(3),.pages button:nth-child(4){display:none} .product-dialog{width:calc(100vw - 24px)} .detail-grid{padding:14px;gap:20px} .detail-image{aspect-ratio:1.3} .detail-copy h2{font-size:34px} .detail-list{grid-template-columns:1fr 1fr} .product-commerce{grid-template-columns:1fr} .source-summary{border-top:1px solid rgba(35,46,38,.16);border-left:0} }
 
 .state-switch { margin-top:34px; padding:18px 20px; border:1px dashed var(--line); border-radius:16px; background:var(--soft); }
 .state-switch-label { display:block; font-size:12px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin-bottom:10px; }

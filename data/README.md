@@ -43,18 +43,8 @@ No se inventan ni traducen valores. Los únicos cambios son la conversión monet
 
 ## Imágenes
 
-El CSV conserva la URL de la imagen principal de cada producto. El mockup incluye localmente las fotografías de sus ocho productos de ejemplo para que pueda abrirse sin conexión.
+El CSV conserva la URL de la imagen principal de cada producto. La aplicación usa esa URL, por lo que las fotografías del catálogo requieren conexión a internet. Los JPG locales son imágenes de ejemplo del paquete de inicio; no sustituyen las imágenes de los productos del CSV.
 
 ## Reproducibilidad
 
-1. Descarga `dataset.csv` desde Zenodo.
-2. Guárdalo como `data/source/mercadona-products.csv`.
-3. Ejecuta:
-
-```bash
-python scripts/build_course_dataset.py
-```
-
-4. El script genera `data/catalog.csv`.
-
-`data/source/` está excluido de Git porque sólo se utiliza durante la generación.
+`data/catalog.csv` es el catálogo entregado para el ejercicio. El archivo original descargado y el script de conversión no forman parte de este repositorio; por eso, el catálogo no se regenera durante la ejecución de la aplicación.
